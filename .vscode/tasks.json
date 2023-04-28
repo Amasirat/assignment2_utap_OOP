@@ -15,7 +15,6 @@
 				"-I/sources/includes",
 				"${workspaceFolder}/includes/creditaccount.cpp",
 				"${workspaceFolder}/includes/client.cpp",
-				"${workspaceFolder}/includes/funcs.cpp",
 				"${workspaceFolder}/main.cpp",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"

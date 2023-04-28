@@ -42,9 +42,10 @@ void CreditAccount::profit(double time_elapsed)
 //after how much time in seconds passes should profit be added to account
     const int profit_time{60};
 //count how many times profit_addition should be performed
-    int profit_count{(int)time_elapsed / profit_time};
+    int profit_count{(int)(time_elapsed * 100000) / profit_time};
     if (profit_count == 0)
     {
+        std::cerr << time_elapsed << '\n';
         std::cout << "You're not eligible for profits, " << m_profit_margin << 
         " percent profit will be added to account after each " << profit_time << " seconds passes\n";
     }
