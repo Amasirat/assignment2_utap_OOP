@@ -22,6 +22,8 @@ public:
     void increase_balance(double money);
 //bank's credit card profit system
     void profit(double time_elapsed);
+//to withdraw money from bank
+    double withdraw(double money);
 private:
     long int m_number{};
     int m_password{};

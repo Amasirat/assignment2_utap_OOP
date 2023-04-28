@@ -10,7 +10,7 @@ public:
     Client();
 //constructor with no default parameter
     Client(const std::string& firstname, const std::string& lastname, 
-    long int national_id, double cash, int size);
+    long int national_id, double cash, int size, CreditAccount* acc);
 //default destructor
     ~Client()
     {
@@ -21,7 +21,10 @@ public:
     double funds() const;
 //withdraw from account
     double withdraw(int account_id, double money);
-    void deposit(int account_id, double money);
+//depsit money into account
+    int deposit(int account_id, double money);
+//to add accounts
+    void add_account(const CreditAccount& acc);
 private:
     std::string m_firstname;
     std::string m_lastname;

@@ -61,3 +61,13 @@ void CreditAccount::profit(double time_elapsed)
         std::cout << profit * profit_count << "$ was added to account\n";
     }
 }
+double CreditAccount::withdraw(double money)
+{
+    if(m_balance < money)
+        return -1;
+    else
+    {
+        m_balance -= money;
+        return money;
+    }
+}
