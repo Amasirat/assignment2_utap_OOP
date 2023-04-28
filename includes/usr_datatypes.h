@@ -6,5 +6,5 @@ long int number{};
 int password{};
 double balance{};
 };
-enum choices{one, two, three, four, END};
+enum choices{one, two, three, four, END, empty};
 #endif

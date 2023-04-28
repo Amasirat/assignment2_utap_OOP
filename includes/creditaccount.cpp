@@ -3,8 +3,7 @@
 //constructor definiton with given default parameters
 CreditAccount::CreditAccount(long int number, int password, double balance, double profit_margin)
 : m_number{number}, m_password{password}, m_balance{balance}, m_profit_margin{profit_margin}
-{
-}
+{}
 //destructor
 CreditAccount::~CreditAccount()
 {
@@ -35,6 +34,7 @@ int CreditAccount::transfer(CreditAccount& card, double money)
 void CreditAccount::increase_balance(double money)
 {
     m_balance += money;
+    std::cout << money << "$ has been added to balance\n";
 }
 //bank's credit card profit system
 void CreditAccount::profit(double time_elapsed)

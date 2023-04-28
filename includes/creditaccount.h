@@ -6,7 +6,7 @@ class CreditAccount
 public:
 //constructor with default given parameters
     CreditAccount(long int number = 6037997236372558, int password = 2558, 
-    double balance = 0, double profit_margin = PROFIT_PERCENTAGE);
+    double balance = 0, double profit_margin = PROFIT_MARGIN);
 //destructor gives a thank you message when going out of scope
     ~CreditAccount();
 //getters
