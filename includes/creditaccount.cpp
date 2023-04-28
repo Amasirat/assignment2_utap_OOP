@@ -45,7 +45,7 @@ void CreditAccount::profit(double time_elapsed)
 //after how much time in seconds passes should profit be added to account
     const int profit_time{60};
 //count how many times profit_addition should be performed
-    int profit_count{(int)(time_elapsed * 100000) / profit_time};
+    int profit_count{(int)(time_elapsed * 10000) / profit_time};
     if (profit_count == 0)
     {
         std::cerr << time_elapsed << '\n';
@@ -54,10 +54,13 @@ void CreditAccount::profit(double time_elapsed)
     }
     else
     {
+std::cerr << "profit count: " << profit_count << '\n';
         double profit{m_balance * (m_profit_margin / 100)};
         for(int count{0}; count < profit_count; ++count)
+        {
             m_balance += profit;
-        
+        }
+std::cerr << "profit count: " << profit_count << '\n';
         std::cout << profit * profit_count << "$ was added to account\n";
     }
 }

@@ -1,5 +1,5 @@
-//#include "includes/funcs.h"
-#include "includes/database.h"
+#include <vector>
+
 
 #include "includes/config.h"
 
@@ -22,12 +22,12 @@ double get_money();
 //finding account in database
 int find_account(long int number);
 
+std::vector<Account> DB_accounts{{6037997237360558, 3265, 5}, {6037645215487945, 6452, 7}};
 
 int main()
 {
     //to count time during the program
-    double start_time{double(clock())};
-    start_time /= CLOCKS_PER_SEC;
+    double start_time{CLOCK_REALTIME};
 
     int db_id{0};    //id of account in database, using vector indexes
     bool program_end = false;
@@ -143,6 +143,7 @@ int main()
             {
                 double time_elapsed {((double)clock()) / CLOCKS_PER_SEC - start_time};
                 usr_acc.profit(time_elapsed);
+                time_elapsed = 0;
                 break;
             }
             case five:
@@ -177,7 +178,8 @@ void clrscreen()
 void bank_menu()
 {
     std::cout << "1.Card to Card transfer\n" << "2.Increase balance\n" 
-    << "3.Show balance\n" << "4.check eligibility for profit\n" << "5.clear screen\n";
+    << "3.Show balance\n" << "4.check eligibility for profit\n" << "5.clear screen\n" << 
+    "END. Terminate Program'\n";
 }
 //function to hash string answers of the user to determine operation
 choices hash(const std::string& string)

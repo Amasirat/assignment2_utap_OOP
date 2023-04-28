@@ -12,7 +12,6 @@
 				"-ggdb",
 				"-DNDEBUG",
 				"-O2",
-				"-I/sources/includes",
 				"${workspaceFolder}/includes/creditaccount.cpp",
 				"${workspaceFolder}/includes/client.cpp",
 				"${workspaceFolder}/main.cpp",
