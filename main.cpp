@@ -1,13 +1,13 @@
-#include <vector>
-
-
+//Default variables 
 #include "includes/config.h"
-
+//CreditAccount class
 #include "includes/creditaccount.h"
-
+//contains enum choice and struct Account definition
 #include "includes/usr_datatypes.h"
-
-#include <iostream>       
+//standard library
+#include <iostream>     
+//in use for vectors
+#include <vector>
 
 //clear the terminal or command shell screen in windows
 void clrscreen();

@@ -1,5 +1,4 @@
 #include "client.h"
-#include "database.h"
 #include <vector>
 
 Client::Client() : m_firstname{"John"}, m_lastname{"Doe"}, m_cash{15.5}, 
