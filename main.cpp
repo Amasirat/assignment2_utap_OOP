@@ -164,9 +164,6 @@ int main()
     return 0; 
 }
 
-
-
-
 //clear the terminal or command shell screen in windows
 void clrscreen()
 {

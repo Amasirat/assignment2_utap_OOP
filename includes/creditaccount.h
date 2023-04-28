@@ -10,8 +10,10 @@ public:
 //destructor gives a thank you message when going out of scope
     ~CreditAccount();
 //getters
-    void show_balance() const;
+    double balance();
+    long int number();
 //member functions
+    void show_balance() const;
 //to check if given password matches password of object
     bool check_pass(int pass) const;
 //card to card transfer, returns 0 if successful and 1 if not

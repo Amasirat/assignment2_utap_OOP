@@ -13,6 +13,9 @@ void CreditAccount::show_balance() const
 {
     std::cout << "Balance: " << m_balance << "$\n";
 }
+//getters definitions
+double CreditAccount::balance(){return m_balance;}
+long int CreditAccount::number(){return m_number;}
 //to check if given password matches password of object
 bool CreditAccount::check_pass(int pass) const
 {
